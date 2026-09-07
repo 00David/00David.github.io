@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/site.config';
+
+const allProjects = await getCollection('project', ({ data }) => !data.draft);
+
+// Every distinct technology used across the projects, most used first.
+const counts = new Map<string, number>();
+for (const entry of allProjects) {
+    for (const tag of entry.data.tags) {
+        counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
+}
+const tools = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([tag]) => tag);
+
+// One entry per academic year, most recent first.
+const years = [
+    ...new Set(
+        [...allProjects].sort((a, b) => b.data.order - a.data.order).map((e) => e.data.period),
+    ),
+];
+---
+
+<BaseLayout title="About" description={`A bit about ${SITE.name} and the projects on this site.`}>
+    <section class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:pt-24">
+        <p class="text-ink-soft mb-6 font-mono text-xs tracking-[0.2em] uppercase">About</p>
+
+        <h1 class="font-display text-ink max-w-xl text-3xl font-medium sm:text-4xl">
+            {SITE.role}.
+        </h1>
+
+        <div class="prose prose-sm sm:prose-base mt-8 max-w-xl">
+            <p>
+                This site collects the main projects I have built so far during my degrees, one page
+                per project, grouped by academic year.
+            </p>
+            <p>
+                They span deliberately different areas of software — web applications, algorithms,
+                simulations — because most of them started as coursework, and each one was a chance
+                to learn a new language or toolchain, or get better with one I already knew.
+            </p>
+        </div>
+
+        <div class="mt-10">
+            <p class="text-ink-soft mb-3 font-mono text-xs tracking-[0.2em] uppercase">Years</p>
+            <ul class="text-ink-soft space-y-1 font-mono text-xs">
+                {years.map((period) => <li>{period}</li>)}
+            </ul>
+        </div>
+
+        <div class="mt-10">
+            <p class="text-ink-soft mb-3 font-mono text-xs tracking-[0.2em] uppercase">Tools</p>
+            <ul class="flex flex-wrap gap-2">
+                {
+                    tools.map((tool) => (
+                        <li class="border-line text-ink-soft rounded-full border px-3 py-1 font-mono text-xs">
+                            {tool}
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </section>
+</BaseLayout>

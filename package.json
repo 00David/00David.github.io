@@ -1,0 +1,48 @@
+{
+    "name": "github-profile-pages",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Personal project portfolio built with Astro.",
+    "keywords": [
+        "astro",
+        "portfolio"
+    ],
+    "author": "David",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/00David/GitHub_profile_pages"
+    },
+    "homepage": "https://00david.github.io",
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro check && astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "check": "astro check",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {
+        "@astrojs/sitemap": "^3.7.3",
+        "astro": "^7.0.4"
+    },
+    "devDependencies": {
+        "@astrojs/check": "^0.9.9",
+        "@astrojs/compiler": "^4.0.0",
+        "@tailwindcss/typography": "^0.5.20",
+        "@tailwindcss/vite": "^4.3.2",
+        "prettier": "^3.9.4",
+        "prettier-plugin-astro": "^0.14.1",
+        "prettier-plugin-tailwindcss": "^0.8.0",
+        "tailwindcss": "^4.3.2",
+        "typescript": "^6.0.3"
+    },
+    "allowScripts": {
+        "esbuild": true
+    },
+    "packageManager": "pnpm@12.3.4+sha512.961aa41fb077da3a04a441d9f8e15ebc0c96da8ef710b2eb67bf9ee7cb0610eabd48f1fd85f51cffe73846785fa0f87c56a3a872a1d893f8446741b5cce45457"
+}

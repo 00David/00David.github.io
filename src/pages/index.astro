@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProjectRow from '@/components/ProjectRow.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { SITE } from '@/site.config';
+
+const allProjects = await getCollection('project', ({ data }) => !data.draft);
+const sortedProjects = [...allProjects].sort((a, b) => b.data.order - a.data.order);
+const selected = sortedProjects.slice(0, SITE.nbLastProjects);
+---
+
+<BaseLayout title={SITE.name}>
+    <section class="mx-auto max-w-3xl px-6 pt-16 pb-20 sm:pt-24">
+        <p class="text-ink-soft mb-6 inline-flex items-center gap-2 font-mono text-xs">
+            <span class="bg-signal h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
+            {SITE.status}
+        </p>
+
+        <h1 class="font-display text-ink max-w-2xl text-4xl leading-[1.1] font-medium sm:text-5xl">
+            Hi there 👋<br />
+            My name is {SITE.name} !
+        </h1>
+
+        <p class="text-ink-soft mt-6 max-w-md">
+            {SITE.tagline}
+        </p>
+    </section>
+
+    <section id="project" class="mx-auto max-w-3xl px-6 pb-20">
+        <SectionHeading eyebrow="Last projects" count={undefined} />
+        <div>
+            {selected.map((entry) => <ProjectRow entry={entry} />)}
+        </div>
+        {
+            allProjects.length > selected.length && (
+                <div class="mt-6">
+                    <a
+                        href="/project"
+                        class="text-ink-soft hover:text-signal font-mono text-xs transition-colors"
+                    >
+                        View all {allProjects.length} projects →
+                    </a>
+                </div>
+            )
+        }
+    </section>
+</BaseLayout>
