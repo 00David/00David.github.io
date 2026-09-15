@@ -27,7 +27,7 @@ export default defineConfig({
     fonts: [
         {
             provider: fontProviders.google(),
-            name: 'Fraunces',
+            name: 'IBM Plex Serif',
             cssVariable: '--ff-display',
             weights: ['400', '500', '600'],
             styles: ['normal', 'italic'],
@@ -35,14 +35,14 @@ export default defineConfig({
         },
         {
             provider: fontProviders.google(),
-            name: 'Inter',
+            name: 'IBM Plex Sans',
             cssVariable: '--ff-body',
             weights: ['400', '500', '600'],
             subsets: ['latin'],
         },
         {
             provider: fontProviders.google(),
-            name: 'Space Mono',
+            name: 'IBM Plex Mono',
             cssVariable: '--ff-mono',
             weights: ['400', '700'],
             subsets: ['latin'],
