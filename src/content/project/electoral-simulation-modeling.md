@@ -4,7 +4,7 @@ summary: A simulation of electoral models applied to voters and candidates place
 code: L2
 period: Second bachelor year · 2023–2024
 order: 3
-tags: [Python, customtkinter, matplotlib]
+tags: [Python, customtkinter, matplotlib, pytest]
 homeTags: [Python, customtkinter]
 draft: false
 ---

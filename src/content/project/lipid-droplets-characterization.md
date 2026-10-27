@@ -3,7 +3,7 @@ title: ImageJ/Fiji lipid droplets characterization plugin
 summary: A Fiji plugin chaining ImageJ tools into a complete treatment pipeline for lipid droplet images.
 code: M1
 period: First master year · 2025–2026
-order: 10
+order: 11
 tags: [Java, Swing, Maven, SciJava, JUnit, GitHub Actions]
 homeTags: [Java, Swing, GitHub Actions]
 repo: https://github.com/FattaccioliLab/lipid-droplets-characterization

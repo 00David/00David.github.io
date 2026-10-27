@@ -3,8 +3,8 @@ title: ISSue — Daily quizzes from the real-time position of the ISS
 summary: A web app generating a daily quiz from the exact position of the International Space Station.
 code: M1
 period: First master year · 2025–2026
-order: 9
-tags: [React, Tailwind CSS, Go, MongoDB, GitHub Actions, Render]
+order: 10
+tags: [JavaScript, React, Tailwind CSS, Go, MongoDB, GitHub Actions, Render]
 homeTags: [React, Tailwind CSS, Go, MongoDB]
 url: https://issue-odz6.onrender.com/
 repo: https://github.com/00David/ISSue

@@ -4,8 +4,8 @@ summary: A Raspberry Pi website translating Morse and French, with input through
 code: L1
 period: First bachelor year · 2022–2023
 order: 1
-tags: [Python, Flask, HTML, CSS, JavaScript, SQL, Raspberry Pi]
-homeTags: [Python, Flask, SQL]
+tags: [Python, Flask, JavaScript, SQLite, Raspberry Pi]
+homeTags: [Python, Flask, SQLite]
 repo: https://github.com/00David/Morse-RasberryPi
 draft: false
 ---

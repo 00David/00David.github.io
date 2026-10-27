@@ -1,0 +1,51 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProjectRow from '@/components/ProjectRow.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+
+// One page per academic year, e.g. /project/year/m1, listing its projects,
+// most recent first. Years are keyed by `code`; its `period` is the title.
+export async function getStaticPaths() {
+    const entries = (await getCollection('project', ({ data }) => !data.draft)).sort(
+        (a, b) => b.data.order - a.data.order,
+    );
+    const codes = new Set(entries.map((entry) => entry.data.code));
+    return [...codes].map((code) => {
+        const projects = entries.filter((entry) => entry.data.code === code);
+        return {
+            params: { year: code.toLowerCase() },
+            props: { code, period: projects[0].data.period, projects },
+        };
+    });
+}
+
+interface Props {
+    code: string;
+    period: string;
+    projects: CollectionEntry<'project'>[];
+}
+
+const { code, period, projects } = Astro.props;
+---
+
+<BaseLayout
+    title={`${code} projects`}
+    description={`Every project from the ${period.split(' · ')[0].toLowerCase()}, most recent first.`}
+>
+    <section class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:pt-24">
+        <a
+            href="/project"
+            class="text-ink-soft hover:text-signal font-mono text-xs transition-colors"
+        >
+            ← All projects
+        </a>
+
+        <h1 class="font-display text-ink mt-6 mb-10 text-3xl font-medium sm:text-4xl">{period}</h1>
+
+        <SectionHeading eyebrow={code} count={projects.length} />
+        <div>
+            {projects.map((entry) => <ProjectRow entry={entry} />)}
+        </div>
+    </section>
+</BaseLayout>

@@ -17,4 +17,6 @@ Main features:
 - Through Strapi, running in container A, modify frontend content running in another container B.
 - Launch containerized producers/consumers with Docker Compose, and make them communicate with the Strapi API.
 
-See in the repository for a demonstration video (in French).
+<video controls autoplay loop playsinline preload="metadata" aria-label="Demonstration of the Web Application containerization">
+    <source src="/assets/l3/demo-docker.mp4" type="video/mp4" />
+</video>

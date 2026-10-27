@@ -16,3 +16,26 @@ export const NAV_LINKS = [
     { label: 'Projects', href: '/project' },
     { label: 'About', href: '/about' },
 ] as const;
+
+// Categories shown line by line on the About page, in this order. Tags are
+// matched by exact name against the projects' `tags`; any tag missing here
+// lands in "Other". Order inside a list does not matter: tags are sorted
+// alphabetically when displayed.
+export const TAG_CATEGORIES = [
+    { label: 'Languages', tags: ['Dart', 'Go', 'Haskell', 'Java', 'JavaScript', 'Python'] },
+    {
+        label: 'Frameworks',
+        tags: ['Django', 'Express', 'Flask', 'Flutter', 'SciJava', 'Tailwind CSS'],
+    },
+    {
+        label: 'Libraries',
+        tags: ['customtkinter', 'Gloss', 'Java RMI', 'matplotlib', 'React', 'Swing', 'tkinter'],
+    },
+    { label: 'Databases', tags: ['MongoDB', 'PostgreSQL', 'SQLite'] },
+    { label: 'DevOps & Tooling', tags: ['Docker', 'Docker Compose', 'GitHub Actions', 'Maven'] },
+    { label: 'Testing', tags: ['hspec', 'JUnit', 'pytest', 'QuickCheck'] },
+    {
+        label: 'Other',
+        tags: ['Firebase', 'Kafka', 'MCP', 'Node.js', 'Raspberry Pi', 'Render', 'Strapi'],
+    },
+] as const;

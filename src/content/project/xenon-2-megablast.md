@@ -3,7 +3,7 @@ title: 'A space-shooter inspired by "Xenon 2: Megablast"'
 summary: A shoot'em up written in Haskell with the Gloss library, with procedural waves and a two-player mode.
 code: M1
 period: First master year · 2025–2026
-order: 8
+order: 9
 tags: [Haskell, Gloss, QuickCheck, hspec]
 homeTags: [Haskell, Gloss]
 repo: https://github.com/00David/Xenon-2-Megablast

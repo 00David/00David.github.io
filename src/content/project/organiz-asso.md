@@ -4,7 +4,7 @@ summary: A forum with authentication, role-based access control, threaded messag
 code: L3
 period: Third bachelor year · 2024–2025
 order: 4
-tags: [React, Express, MongoDB]
+tags: [JavaScript, React, Express, MongoDB]
 homeTags: [React, Express, MongoDB]
 repo: https://github.com/00David/Web
 draft: false

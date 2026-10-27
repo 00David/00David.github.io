@@ -1,0 +1,48 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ProjectRow from '@/components/ProjectRow.astro';
+import SectionHeading from '@/components/SectionHeading.astro';
+import { tagSlug } from '@/utils/tags';
+
+// One page per distinct tag, e.g. /project/tag/tailwind-css, listing every
+// project that uses it, most recent first.
+export async function getStaticPaths() {
+    const entries = (await getCollection('project', ({ data }) => !data.draft)).sort(
+        (a, b) => b.data.order - a.data.order,
+    );
+    const tags = new Set(entries.flatMap((entry) => entry.data.tags));
+    return [...tags].map((tag) => ({
+        params: { tag: tagSlug(tag) },
+        props: { tag, projects: entries.filter((entry) => entry.data.tags.includes(tag)) },
+    }));
+}
+
+interface Props {
+    tag: string;
+    projects: CollectionEntry<'project'>[];
+}
+
+const { tag, projects } = Astro.props;
+---
+
+<BaseLayout
+    title={`${tag} projects`}
+    description={`Every project built with ${tag}, most recent first.`}
+>
+    <section class="mx-auto max-w-3xl px-6 pt-16 pb-24 sm:pt-24">
+        <a
+            href="/project"
+            class="text-ink-soft hover:text-signal font-mono text-xs transition-colors"
+        >
+            ← All projects
+        </a>
+
+        <h1 class="font-display text-ink mt-6 mb-10 text-3xl font-medium sm:text-4xl">{tag}</h1>
+
+        <SectionHeading eyebrow="Projects" count={projects.length} />
+        <div>
+            {projects.map((entry) => <ProjectRow entry={entry} />)}
+        </div>
+    </section>
+</BaseLayout>
