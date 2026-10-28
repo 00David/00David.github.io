@@ -8,7 +8,10 @@ export const SITE = {
         'Projects built by me while studying software engineering at Sorbonne University — web applications, algorithms and simulations.',
     status: 'Currently studying software engineering · Sorbonne University, France',
     nbLastProjects: 5,
-    social: [{ label: 'GitHub', href: 'https://github.com/00David' }],
+    social: [
+        { label: 'GitHub', href: 'https://github.com/00David' },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/david-vadimon' },
+    ],
     locale: 'en',
 } as const;
 

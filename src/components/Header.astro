@@ -1,7 +1,14 @@
 ---
 import GitHubIcon from '@/components/GitHubIcon.astro';
+import LinkedInIcon from '@/components/LinkedInIcon.astro';
 import ThemeToggle from '@/components/ThemeToggle.astro';
 import { SITE, NAV_LINKS } from '@/site.config';
+
+// SITE.social entries listed here show as an icon; any other one as its label.
+const SOCIAL_ICONS: Partial<Record<string, typeof GitHubIcon>> = {
+    GitHub: GitHubIcon,
+    LinkedIn: LinkedInIcon,
+};
 
 const currentPath = Astro.url.pathname;
 ---
@@ -12,7 +19,7 @@ const currentPath = Astro.url.pathname;
             {SITE.name}
         </a>
 
-        <nav class="flex items-center gap-5" aria-label="Primary">
+        <nav class="flex items-center gap-3 sm:gap-5" aria-label="Primary">
             {
                 NAV_LINKS.map((link) => {
                     const isActive =
@@ -32,16 +39,19 @@ const currentPath = Astro.url.pathname;
                 })
             }
             {
-                SITE.social.map((link) => (
-                    <a
-                        href={link.href}
-                        aria-label={link.label === 'GitHub' ? link.label : undefined}
-                        class="hover:text-signal transition-colors"
-                        rel="me"
-                    >
-                        {link.label === 'GitHub' ? <GitHubIcon /> : link.label}
-                    </a>
-                ))
+                SITE.social.map((link) => {
+                    const Icon = SOCIAL_ICONS[link.label];
+                    return (
+                        <a
+                            href={link.href}
+                            aria-label={Icon ? link.label : undefined}
+                            class="hover:text-signal transition-colors"
+                            rel="me"
+                        >
+                            {Icon ? <Icon /> : link.label}
+                        </a>
+                    );
+                })
             }
             <ThemeToggle />
         </nav>
