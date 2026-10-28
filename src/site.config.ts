@@ -25,10 +25,13 @@ export const NAV_LINKS = [
 // lands in "Other". Order inside a list does not matter: tags are sorted
 // alphabetically when displayed.
 export const TAG_CATEGORIES = [
-    { label: 'Languages', tags: ['Dart', 'Go', 'Haskell', 'Java', 'JavaScript', 'Python'] },
+    {
+        label: 'Languages',
+        tags: ['Dart', 'Go', 'Haskell', 'Java', 'JavaScript', 'Python', 'TypeScript'],
+    },
     {
         label: 'Frameworks',
-        tags: ['Django', 'Express', 'Flask', 'Flutter', 'SciJava', 'Tailwind CSS'],
+        tags: ['Django', 'Express', 'Flask', 'Flutter', 'SciJava', 'Spring Boot', 'Tailwind CSS'],
     },
     {
         label: 'Libraries',
