@@ -35,7 +35,16 @@ export const TAG_CATEGORIES = [
     },
     {
         label: 'Libraries',
-        tags: ['customtkinter', 'Gloss', 'Java RMI', 'matplotlib', 'React', 'Swing', 'tkinter'],
+        tags: [
+            'customtkinter',
+            'Gloss',
+            'Java RMI',
+            'Javassist',
+            'matplotlib',
+            'React',
+            'Swing',
+            'tkinter',
+        ],
     },
     { label: 'Databases', tags: ['MongoDB', 'PostgreSQL', 'SQLite'] },
     { label: 'DevOps & Tooling', tags: ['Docker', 'Docker Compose', 'GitHub Actions', 'Maven'] },

@@ -1,6 +1,6 @@
 ---
 title: Minimal Publish-Subscribe system
-summary: Distributed, multi-threaded publish-subscribe system built with components, applied to weather stations and wind turbines.
+summary: Component-based distributed and multi-threaded publish-subscribe system, applied to weather stations and wind turbines.
 code: M1
 period: First master year · 2025–2026
 order: 8
@@ -17,6 +17,7 @@ System:
 - Publish/subscribe: a broker manages channels; weather clients (stations, bureaus, wind turbines) publish messages or subscribe with a filter.
 - Distributed execution: brokers run in separate JVMs, connected through Java RMI and synchronised by a gossip protocol.
 - Multi-threaded components: brokers run with several dedicated thread pools.
+- Unit tests per component and integration test scenarios gathering all of them.
 
 Main features:
 
