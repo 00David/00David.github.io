@@ -5,7 +5,7 @@ code: L3
 period: Third bachelor year · 2024–2025
 order: 5
 tags: [Docker, Docker Compose, Kafka, Strapi, PostgreSQL]
-homeTags: [Docker, Docker Compose, Kafka, Strapi]
+homeTags: [Docker, Kafka, Strapi, PostgreSQL]
 repo: https://github.com/00David/DevOps_Project
 draft: false
 ---

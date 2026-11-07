@@ -23,3 +23,5 @@ Main features:
 <video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the ISSue web application">
     <source src="/assets/m1/demo-issue.mp4" type="video/mp4" />
 </video>
+
+Note: the live demo is hosted on [Render](https://render.com/)'s free tier, so the first visit may take about 30 seconds while the server wakes up.

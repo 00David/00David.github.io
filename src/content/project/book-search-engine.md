@@ -4,8 +4,20 @@ summary: Web/mobile search engine over a library of Gutenberg books, with regex 
 code: M2
 period: Second master year · 2026–2027
 order: 13
-tags: [TypeScript, React, Tailwind CSS, Java, Spring Boot, PostgreSQL, Maven, JUnit, GitHub Actions]
-homeTags: [React, Tailwind CSS, Java, Spring Boot, PostgreSQL]
+tags:
+    [
+        TypeScript,
+        React,
+        Java,
+        Spring Boot,
+        PostgreSQL,
+        Maven,
+        JUnit,
+        Docker,
+        Docker Compose,
+        GitHub Actions,
+    ]
+homeTags: [React, Java, Spring Boot, PostgreSQL, Docker]
 draft: false
 ---
 
@@ -18,5 +30,6 @@ Main features:
 - Ranking: results ordered by relevance. The ranking combines occurrence counts with a centrality measure (closeness, betweenness or PageRank) computed on the Jaccard similarity graph of the books.
 - Recommendation: suggests books close to the top results in the Jaccard graph.
 - Multi-device: the app runs on several clients (laptops, iOS and Android phones) connected to the same LAN.
+- Deployment: frontend, Spring Boot backend and PostgreSQL database each run in their own container, orchestrated with Docker Compose.
 
 <img src="/assets/work-in-progress.png" alt="WORK IN PROGRESS" />
