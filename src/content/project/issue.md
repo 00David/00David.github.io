@@ -20,7 +20,7 @@ Main features:
 - Leaderboard: global ranking of users by total score.
 - User accounts: register, log in, view other profiles, and manage your own.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the ISSue web application">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the ISSue web application">
     <source src="/assets/m1/demo-issue.mp4" type="video/mp4" />
 </video>
 

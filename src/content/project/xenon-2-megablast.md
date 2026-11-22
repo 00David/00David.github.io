@@ -21,6 +21,6 @@ Main features:
 
 I use WSL so I sometimes experience freezes, which is not the case with native Linux.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the Xenon 2 inspired space-shooter">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the Xenon 2 inspired space-shooter">
     <source src="/assets/m1/demo-xenon.mp4" type="video/mp4" />
 </video>

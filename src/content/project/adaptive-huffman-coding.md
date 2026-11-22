@@ -18,6 +18,6 @@ Main features:
 - Decompression: from binary to .txt file.
 - Statistics generated on each compression / decompression.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the adaptive Huffman coding implementation">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the adaptive Huffman coding implementation">
     <source src="/assets/m1/demo-huff.mp4" type="video/mp4" />
 </video>

@@ -22,6 +22,6 @@ Main features:
 - Admin dashboard (user roles, registrations).
 - Soft & hard deletion system (messages & accounts).
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the Organiz'Asso forum">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the Organiz'Asso forum">
     <source src="/assets/l3/demo-web.mp4" type="video/mp4" />
 </video>

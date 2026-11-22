@@ -19,6 +19,6 @@ Main features:
 - Welzl iterative implementation.
 - UI to visualize and compare execution times.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the Welzl algorithm implementation">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the Welzl algorithm implementation">
     <source src="/assets/m1/demo-welzl.mp4" type="video/mp4" />
 </video>

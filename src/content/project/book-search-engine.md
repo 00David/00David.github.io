@@ -33,6 +33,6 @@ Main features:
 - Multi-device: the app runs on several clients (laptops, iOS and Android phones) connected to the same LAN.
 - Deployment: frontend, Spring Boot backend and PostgreSQL database each run in their own container, orchestrated with Docker Compose.
 
-<video controls autoplay loop playsinline preload="metadata" aria-label="Demonstration of the GutenDAAR search engine">
+<video controls loop playsinline preload="metadata" aria-label="Demonstration of the GutenDAAR search engine">
     <source src="/assets/m2/demo-library.mp4" type="video/mp4" />
 </video>

@@ -21,10 +21,10 @@ Main features:
 - Saving and loading of scenarios.
 - An election campaign mode: over X days, events influence the political positions of voters until the final election day. Some natural events are determined by the world's characteristics, while others involving candidates have outcomes determined by the candidates' characteristics.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the electoral simulation main mode">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the electoral simulation main mode">
     <source src="/assets/l2/demo-sept-main.mp4" type="video/mp4" />
 </video>
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the electoral simulation campaign mode">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the electoral simulation campaign mode">
     <source src="/assets/l2/demo-sept-campain.mp4" type="video/mp4" />
 </video>

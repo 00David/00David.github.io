@@ -22,6 +22,6 @@ Main features:
 - Parameters export/import as JSON.
 - Batch mode.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the lipid droplets characterization plugin">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the lipid droplets characterization plugin">
     <source src="/assets/m1/demo-ldc.mp4" type="video/mp4" />
 </video>

@@ -19,6 +19,6 @@ Main features:
 - Individuals can move, or have their movements restricted by lockdowns.
 - A simulation mode: it provides more statistics and offers a direct comparison between the original SEIR model and our spatial implementation.
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the epidemic spread simulation">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the epidemic spread simulation">
     <source src="/assets/l1/demo-epidemy.mp4" type="video/mp4" />
 </video>

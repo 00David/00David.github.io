@@ -32,6 +32,6 @@ Demonstration component deployment architecture:
 
 <img src="/assets/m1/architecture-publish-subscribe.png" alt="Deployment architecture of the distributed demonstration: 5 brokers in separate JVMs and their weather clients" loading="lazy" />
 
-<video controls autoplay loop muted playsinline preload="metadata" aria-label="Demonstration of the publish-subscribe system">
+<video controls loop muted playsinline preload="metadata" aria-label="Demonstration of the publish-subscribe system">
     <source src="/assets/m1/demo-publish-subscribe.mp4" type="video/mp4" />
 </video>
